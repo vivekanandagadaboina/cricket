@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual T20 Cricket Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>T20 Cricket Game</h1>
+        <div class="game-content">
+            <div class="scoreboard">
+                <div class="team-info">
+                    <h2 id="team1-name">India</h2>
+                    <div>Runs: <span id="team1-runs">0</span></div>
+                    <div>Wickets: <span id="team1-wickets">0</span></div>
+                    <div>Overs: <span id="team1-overs">0</span>.<span id="team1-balls">0</span></div>
+                </div>
+                <div class="team-info">
+                    <h2 id="team2-name">Australia</h2>
+                    <div>Runs: <span id="team2-runs">0</span></div>
+                    <div>Wickets: <span id="team2-wickets">0</span></div>
+                    <div>Overs: <span id="team2-overs">0</span>.<span id="team2-balls">0</span></div>
+                </div>
+            </div>
+            <div class="controls batting-controls">
+                <button onclick="playShot('defensive')">Defensive Shot</button>
+                <button onclick="playShot('aggressive')">Aggressive Shot</button>
+                <button onclick="playShot('risky')">Risky Shot</button>
+            </div>
+            <div class="controls bowling-controls" style="display:none;">
+                <button onclick="bowl('fast')">Fast Ball</button>
+                <button onclick="bowl('spin')">Spin Ball</button>
+                <button onclick="bowl('swing')">Swing Ball</button>
+            </div>
+        </div>
+        <div id="feedback"></div>
+        <canvas id="cricketCanvas" width="800" height="400"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
